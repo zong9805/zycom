@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+    qrbbitpro:
+        container_name: rabbitpro
+        restart: always
+        ports: 
+            - '5702:1234'
+        volumes: 
+            - ./data:/Rabbit/data
+        stdin_open: true
+        tty: true
+        privileged: true
+        image: shufflewzc/qrbbitpro:latest
